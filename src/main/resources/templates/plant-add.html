@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <div th:replace="fragments/navbar"></div>
+    <link rel="stylesheet" href="/css/plant.css">
+    <title>Create new plant</title>
+    <li><a href="http://localhost:8081/index">Home</a></li>
+</head>
+<body class="bg-img-plant">
+<div align="center">
+    <h1>Create new plant</h1>
+    <div>
+        <form method="post" th:action="@{/plant/add}" th:object="${plant}">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input id="name" th:field="*{name}" type="text">
+                    <span th:if="${#fields.hasErrors('name')}" th:error="*{name}" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="description">Description</label>
+                    <input id="description" th:field="*{description}" type="text">
+                </div>
+                <li><a href="http://localhost:8081/plant/">Back to list</a></li>
+
+
+                <div>
+                    <a th:href="@{/plant}">
+                        <button class="btn btn-secondary" id="cancel" name="cancel" type="submit">Cancel</button>
+                    </a>
+                    <button class="btn btn-primary" id="save" name="save" type="submit">Save</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+</div>
+</body>
+</html>

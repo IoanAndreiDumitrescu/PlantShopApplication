@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <div th:replace="fragments/navbar"></div>
+    <link rel="stylesheet" href="css/create-plant.css">
+    <title>Edit flower pot</title>
+<body class="flower-pot">
+<li><a href="http://localhost:8081/index">Home</a></li>
+<div align="center">
+    <h1>Edit pot</h1>
+    <div>
+        <form method="post" th:action="@{/pot/{id}/edit(id=${pot.id})}" th:object="${pot}">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input id="name" th:field="*{name}" type="text">
+                    <span th:if="${#fields.hasErrors('name')}" th:error="*{name}" class="text-danger"></span>
+                </div>
+                <div class="pot-description">
+                    <label for="description">Description</label>
+<!--                    <input id="description" th:field="*{description}" type="text">-->
+                    <textarea placeholder="Type something here..." input id="description" th:field="*{description}" type="text"></textarea>
+                </div>
+
+
+
+                <div>
+                    <a th:href="@{/pot}">
+                        <button class="btn btn-secondary" id="cancel" name="cancel" type="submit">Cancel</button>
+                    </a>
+                    <button class="btn btn-primary" id="save" name="save" type="submit">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

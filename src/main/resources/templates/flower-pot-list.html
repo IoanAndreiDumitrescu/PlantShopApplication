@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="EN">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/css/pot.css">
+    <title>Flower pot</title>
+</head>
+<body class="bg-img">
+
+<li><a href="http://localhost:8081/index">Home</a></li>
+<div align="center">
+    <h1>Flower pot list</h1>
+
+    <a th:href="@{/pot/add}">Create new flower pot</a>
+
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th>Name|</th>
+            <th>Description|</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="pot : ${potsInView}">
+            <td th:text="${pot.name}"></td>
+            <td th:text="${pot.description}"></td>
+
+            <td>
+                <div class="actions">
+                    <a th:href="@{/pot/{id}/edit(id = ${pot.id})}">Edit</a>
+                    <a th:href="@{/pot/{id}/delete(id = ${pot.id})}">Delete</a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
