@@ -199,10 +199,7 @@ nav .search-icon{
 .space{
     margin: 10px 0;
 }
-nav .logo.space{
-    color: red;
-    padding: 0 5px 0 0;
-}
+
 @media (max-width: 980px){
     nav .menu-icon,
     nav .cancel-icon,

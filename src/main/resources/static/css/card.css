@@ -1,3 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.offers{
+    background-image:  url(../img/spring-floral-watercolor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin-right: 0;
+    margin-left: 0;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -11,7 +26,7 @@
     font-size: 22px;
 }
 
-.card button {
+.card-button {
     border: none;
     outline: 0;
     padding: 12px;
@@ -23,7 +38,7 @@
     font-size: 18px;
 }
 
-.card button:hover {
+.card-button:hover {
     opacity: 0.7;
 }
 
@@ -36,17 +51,17 @@ body {
 }
 
 /* Float four columns side by side */
-.column {
+.column-offers {
     float: left;
     width: 25%;
     padding: 0 10px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row-offers {margin: 0 -5px;}
 
 /* Clear floats after the columns */
-.row:after {
+.row-offers:after {
     content: "";
     display: table;
     clear: both;
@@ -60,11 +75,12 @@ body {
     text-align: center;
     background-color: #f1f1f1;
     margin: 100px auto 0;
+    margin-bottom: 100px;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
-    .column {
+    .column-offers {
         width: 100%;
         display: block;
         margin-bottom: 20px;

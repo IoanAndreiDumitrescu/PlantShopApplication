@@ -38,7 +38,7 @@ input[type=submit]:hover {
 }
 
 /* Create two columns that float next to eachother */
-.column {
+.column-contact {
     max-width: 700px;
     width: 100%;
 
