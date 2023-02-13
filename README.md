@@ -1,4 +1,4 @@
-# PlantShopApplication
+# PlantShop (work in progress)
 * The project is implemented on the theme of a online shop
 * Frontend Manages Persistence, logic and data security
 
