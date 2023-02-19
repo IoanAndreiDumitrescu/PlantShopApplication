@@ -3,7 +3,6 @@ package com.andrei.plantshop.controller;
 import com.andrei.plantshop.dto.PlantDTO;
 import com.andrei.plantshop.entities.Plant;
 import com.andrei.plantshop.service.PlantService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,8 +15,11 @@ import java.util.List;
 @RequestMapping("/plant")
 public class PlantController {
 
-    @Autowired
-    private PlantService plantService;
+    private final PlantService plantService;
+
+    public PlantController(PlantService plantService) {
+        this.plantService = plantService;
+    }
 
     @GetMapping("/")
     public String showPlantsPage(Model model) {

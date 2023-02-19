@@ -9,7 +9,6 @@
     background-repeat: no-repeat;
     margin-right: 300px;
     background-position: right;
-    max-width: 100%;
     height: 100vh;
 }
 
@@ -18,11 +17,11 @@
     background-repeat:no-repeat ;
     background-position: left;
     padding-top: 210px;
-    padding-left: 100px;
+    padding-left: 350px;
     text-indent: 30px;
     font-style: italic;
     text-align: left;
-    width: 600px;
+    width: 1200px;
     height: 100vh;
 
 

@@ -3,7 +3,6 @@ package com.andrei.plantshop.controller;
 import com.andrei.plantshop.dto.PotDto;
 import com.andrei.plantshop.entities.Pot;
 import com.andrei.plantshop.service.PotService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,8 +15,11 @@ import java.util.List;
 @RequestMapping("/pot")
 public class PotController {
 
-    @Autowired
-    private PotService potService;
+    private final PotService potService;
+
+    public PotController(PotService potService) {
+        this.potService = potService;
+    }
 
     @GetMapping("/")
     public String showPotPage(Model model) {
